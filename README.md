@@ -1,6 +1,6 @@
 # Système de jeu Chroniques Oubliées Contemporain pour Foundry VTT
 
-<img src="https://github.com/ZigmundKreud/coc/raw/master/ui/coc/logo.png" width="50%">
+<img src="https://github.com/BlackBookEditions/foundry-coc1/raw/master/ui/coc/logo.png" width="50%">
 
 Ce système est fait pour être exécuté dans le moteur [Foundry VTT](https://foundryvtt.com/).
 
@@ -16,11 +16,11 @@ Modules disponibles :
 ### Installation manuelle
 
 * Allez dans la page d'accueil de Foundry (Configuration and Setup), cliquer sur Game Systems.
-* Cliquez sur "Install System" et coller le lien vers le [manifest](https://raw.githubusercontent.com/ZigmundKreud/coc/master/system.json) dans le champ "Manifest URL" en bas de la fenêtre. 
+* Cliquez sur "Install System" et coller le lien vers le [manifest](https://raw.githubusercontent.com/BlackBookEditions/foundry-coc1/master/system.json) dans le champ "Manifest URL" en bas de la fenêtre. 
 * Cliquez sur "Install"
 
 ### Fonctionnalités
-Le détail des fonctionnalités par version est dans le [changelog](https://github.com/ZigmundKreud/coc/blob/master/CHANGELOG).
+Le détail des fonctionnalités par version est dans le [changelog](https://github.com/BlackBookEditions/foundry-coc1/blob/master/CHANGELOG).
 ### Mentions Légales
 
 CHRONIQUES OUBLIÉES™ FANTASY/CONTEMPORAIN est un jeu de Black Book Éditions/Casus Belli. Tous droits réservés.

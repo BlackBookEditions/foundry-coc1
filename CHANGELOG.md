@@ -1,3 +1,6 @@
+### 13.347.1
+- Le repository est chez BBE
+
 ### 13.347.0
 - Correctif Application des dommages via les boutons dans le chat (@ajite)
 

@@ -1,4 +1,8 @@
-node_modules/*
-.idea
-packs/*
+# IDE
 styles/**/*.css
+
+# Node Modules
+node_modules/
+
+# Foundry VTT
+packs/
