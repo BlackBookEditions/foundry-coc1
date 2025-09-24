@@ -1,8 +1,36 @@
 # Système de jeu Chroniques Oubliées Contemporain pour Foundry VTT
 
-<img src="https://github.com/BlackBookEditions/foundry-coc1/raw/master/ui/coc/logo.png" width="50%">
+<p align="center">
+    <img src="https://github.com/BlackBookEditions/foundry-coc1/raw/master/ui/coc/logo.png" width="50%">
+</p>
 
-Ce système est fait pour être exécuté dans le moteur [Foundry VTT](https://foundryvtt.com/).
+
+<p align="center">
+    <img alt="Foundry Version 12 support" src="https://img.shields.io/badge/Foundry-v12-informational">
+    <img alt="Foundry Version 13 support" src="https://img.shields.io/badge/Foundry-v13-informational">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/BlackBookEditions/foundry-cof1"> 
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/BlackBookEditions/foundry-cof1">
+    <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/BlackBookEditions/foundry-cof1?label=latest%20release" /> 
+</p>
+
+<p align="center">
+    Je ne suis pas salarié de BBE, je maintiens ce système bénévolement, n'hésitez pas à me payer un café pour me soutenir.
+</p>
+
+<p align="center">
+   	<a href='https://ko-fi.com/kristov' target='_blank'>
+        <img 
+            height='36' 
+            style='border:0px;height:36px;' 
+            src='https://storage.ko-fi.com/cdn/kofi3.png?v=6' 
+            border='0' 
+            alt='Buy Me a Coffee at ko-fi.com' 
+        />
+    </a>
+</p>
+
+
+Ce système est développé pour [Foundry VTT](https://foundryvtt.com/).
 
 Le système comporte les règles et le design du jeu de base, les settings spécifiques sont dans des modules séparés.
 
@@ -21,6 +49,7 @@ Modules disponibles :
 
 ### Fonctionnalités
 Le détail des fonctionnalités par version est dans le [changelog](https://github.com/BlackBookEditions/foundry-coc1/blob/master/CHANGELOG).
+
 ### Mentions Légales
 
 CHRONIQUES OUBLIÉES™ FANTASY/CONTEMPORAIN est un jeu de Black Book Éditions/Casus Belli. Tous droits réservés.
@@ -120,5 +149,8 @@ CHRONIQUES OUBLIÉES™ FANTASY/CONTEMPORAIN est un jeu de Black Book Éditions/
 ---
 
 ### LICENCE
-Ce système est protégé par une licence [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+<ul>
+<li>Le code HTML, CSS et Javascript de ce projet est placé sous <a href="https://choosealicense.com/licenses/gpl-3.0/">licence GNU General Public License v3.0</a></li>
 
+<li>Foundry VTT support is covered by the following license: <a href="https://foundryvtt.com/article/license/">Limited License Agreement for module development 17/02/2021</a>.</li>
+</ul>
