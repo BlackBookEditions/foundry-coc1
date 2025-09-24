@@ -1,10 +1,10 @@
 export class EntitySummary {
-    static create(itemData){
+    static create(item){
         return {
-            _id : itemData._id,
-            name: itemData.name,
-            img: itemData.img,
-            sourceId : itemData._stats.compendiumSource
+            _id : item._id,
+            name: item.name,
+            img: item.img,
+            sourceId : item.uuid
         }
     }
 

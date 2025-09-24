@@ -169,24 +169,24 @@ export class CoCItemSheet extends foundry.appv1.sheets.ItemSheet {
   /**
    * Handle dropping of an item reference or item data onto an Actor Sheet
    * @param {DragEvent} event     The concluding DragEvent which contains drop data
-   * @param {Object} data         The data transfer extracted from the event
+   * @param {Object} data         The data transfer extracted from the event : type and uuid
    * @return {Object}             OwnedItem data to create
    * @private
    */
   async _onDropItem(event, data) {
-    Item.fromDropData(data).then((item) => {
-      const itemData = foundry.utils.duplicate(item)
-      switch (itemData.type) {
-        case "path":
-          return this._onDropPathItem(event, itemData)
-        case "capacity":
-          return this._onDropCapacityItem(event, itemData)
-        case "profile":
-          return this._onDropProfileItem(event, itemData)
-        default:
-          return false
-      }
-    })
+    event.preventDefault()
+    const item = await Item.fromDropData(data)
+    console.log("Dropped item", item)
+    switch (item.type) {
+      case "path":
+        return this._onDropPathItem(item)
+      case "capacity":
+        return this._onDropCapacityItem(item)
+      case "profile":
+        return false
+      default:
+        return false
+    }
   }
   /* -------------------------------------------- */
   /**
@@ -201,23 +201,27 @@ export class CoCItemSheet extends foundry.appv1.sheets.ItemSheet {
 
   /* -------------------------------------------- */
 
-  _onDropProfileItem(event, itemData) {
-    return false
-  }
-
-  /* -------------------------------------------- */
-
-  _onDropPathItem(event, itemData) {
-    event.preventDefault()
-    if (this.item.type === "profile") return Path.addToItem(this.item, itemData)
+  /**
+   * Handles the drop event for a path item onto the item sheet.
+   *
+   * @param {Object} path - The item being dropped.
+   * @returns {boolean|Promise} Returns the result of Path.addToItem if the item type is "profile", otherwise returns false.
+   */
+  _onDropPathItem(path) {
+    if (this.item.type === "profile") return Path.addToItem(this.item, path)
     else return false
   }
 
   /* -------------------------------------------- */
 
-  _onDropCapacityItem(event, itemData) {
-    event.preventDefault()
-    if (this.item.type === "path") return Capacity.addToItem(this.item, itemData)
+  /**
+   * Handles the drop event for a capacity item onto the current item sheet.
+   *
+   * @param {Object} capacity - The item being dropped.
+   * @returns {boolean|Promise} Returns the result of adding the capacity to the item if the item type is "path", otherwise returns false.
+   */
+  _onDropCapacityItem(capacity) {
+    if (this.item.type === "path") return Capacity.addToItem(this.item, capacity)
     else return false
   }
 

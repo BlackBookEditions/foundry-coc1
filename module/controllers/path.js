@@ -68,14 +68,14 @@ export class Path {
     /**
      *
      * @param {*} entity
-     * @param {*} pathData
+     * @param {*} path
      * @returns
      */
-    static addToItem(entity, pathData) {
+    static addToItem(entity, path) {
         let paths = entity.system.paths;
         let pathsIds = paths.map(p => p._id);
-        if (pathsIds && !pathsIds.includes(pathData._id)) {
-            paths.push(EntitySummary.create(pathData));
+        if (pathsIds && !pathsIds.includes(path._id)) {
+            paths.push(EntitySummary.create(path));
             return entity.update({ "system.paths": paths });
         } else ui.notifications.error(game.i18n.localize("COC.notification.PathAlreadyOnItem"));
     }
