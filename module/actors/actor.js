@@ -335,11 +335,11 @@ export class CoCActor extends Actor {
 
      * @returns {string} retourne la chaine de caractères utilisée pour le lancer de dés
      */
-  computeDm(itemDmgBase, itemDmgStat, itemDmgBonus) {
+  computeDm(itemDmgBase, itemDmgStat, itemDmgBonus, actorDmBonus = 0) {
     let total = itemDmgBase
 
     const fromStat = eval("this.system." + itemDmgStat)
-    const fromBonus = fromStat ? parseInt(fromStat) + itemDmgBonus : itemDmgBonus
+    const fromBonus = fromStat ? parseInt(fromStat) + itemDmgBonus + actorDmBonus : itemDmgBonus + actorDmBonus
     if (fromBonus < 0) total = itemDmgBase + " - " + parseInt(-fromBonus)
     if (fromBonus > 0) total = itemDmgBase + " + " + fromBonus
 

@@ -52,8 +52,10 @@ export class CoCItem extends Item {
       const skillMod = eval("actorData.system." + itemData.system.skill.split("@")[1])
       itemData.system.mod = parseInt(skillMod) + parseInt(itemData.system.skillBonus)
       // Compute damage mod
+      const attackType = itemData.system.skill.split(".")[1]
+      const actorDmBonus = parseInt(actorData.system.attacks[attackType]?.dmBonus) || 0
       const dmgStat = eval("actorData.system." + itemData.system.dmgStat.split("@")[1])
-      const dmgBonus = dmgStat ? parseInt(dmgStat) + parseInt(itemData.system.dmgBonus) : parseInt(itemData.system.dmgBonus)
+      const dmgBonus = dmgStat ? parseInt(dmgStat) + parseInt(itemData.system.dmgBonus) + actorDmBonus : parseInt(itemData.system.dmgBonus) + actorDmBonus
       const dmgBase = itemData.system.dmgBase
       if (dmgBonus < 0) itemData.system.dmg = dmgBase + " - " + parseInt(-dmgBonus)
       else if (dmgBonus === 0) itemData.system.dmg = dmgBase

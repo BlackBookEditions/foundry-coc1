@@ -222,8 +222,10 @@ export class Macros {
         const itemDmgBase = itemData.system.dmgBase;
         const itemDmgStat = itemData.system.dmgStat.split("@")[1];
         const itemDmgBonus = parseInt(itemData.system.dmgBonus);
+        const attackType = itemData.system.skill.split(".")[1];
+        const actorDmBonus = parseInt(actor.system.attacks[attackType]?.dmBonus) || 0;
 
-        let dmg = actor.computeDm(itemDmgBase, itemDmgStat, itemDmgBonus);
+        let dmg = actor.computeDm(itemDmgBase, itemDmgStat, itemDmgBonus, actorDmBonus);
 
         if (dialog) {
           if (dmgOnly) CoCRoll.rollDamageDialog(actor, label, dmg, 0, false, "submit", dmgDescr);

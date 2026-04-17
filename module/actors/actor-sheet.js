@@ -118,8 +118,10 @@ export class CoCActorSheet extends CoCBaseSheet {
             const itemDmgBase = item.system.dmgBase
             const itemDmgStat = item.system.dmgStat.split("@")[1]
             const itemDmgBonus = parseInt(item.system.dmgBonus)
+            const attackType = item.system.skill.split(".")[1]
+            const actorDmBonus = parseInt(this.actor.system.attacks[attackType]?.dmBonus) || 0
 
-            item.system.dmg = this.actor.computeDm(itemDmgBase, itemDmgStat, itemDmgBonus)
+            item.system.dmg = this.actor.computeDm(itemDmgBase, itemDmgStat, itemDmgBonus, actorDmBonus)
           }
         })
       }

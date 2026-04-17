@@ -1,3 +1,6 @@
+### 13.351.1
+- Prise en compte de dmBonus pour les différents types de dégâts
+
 ### 13.347.2
 - Correction sur le drop de capacités ou de voies quand elles viennent du compendium du système
 - Correction de l'action Edit quand les voies viennent du compendium
